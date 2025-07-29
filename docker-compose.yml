@@ -1,0 +1,32 @@
+name: etv-prevue
+services:
+    test:
+        ports:
+            - 8080:80
+            - 1935:1935  # RTMP Port
+            - 5900:5900
+            - 5901:5901  # VNC Port
+        volumes:
+            # Mandatory Files. Getting them is up to you. Your liability, not mine.
+
+            # This is the image for UVG Esquire/TV Guide
+            - /root/PREVUE.ADF:/app/prevue.adf:ro
+
+            # This is the Commodore Business Machines AMiGA 500+ "KickStart" (BIOS) 2.4 ROM.
+            - /root/KS204.rom:/app/ks.rom:ro
+
+            # For Time Sync. Ostensibly safe to leave completely alone.
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+        tmpfs:
+            # Highly recommended RAM Disks to avoid unnecessary wear on your storage
+            - /app/work:size=64M
+            - /root/FS-UAE/Cache/Logs:size=64M
+        environment:
+            # ErsatzTV or other XML Source location to pull from.
+            - XMLTV_LOCATION=http://multimedia:8409/iptv/xmltv.xml
+            # Your VNC Password of choice.
+            - VNC_PASSWD=testvnc
+        stdin_open: true
+        tty: true
+        image: prevue:latest
