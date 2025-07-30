@@ -5,7 +5,7 @@ FROM debian:bookworm
 RUN apt-get update -y; apt-get upgrade -y; apt dist-upgrade -y
 
 #Install Minimal Tools
-RUN apt-get install anacron cron net-tools nano sudo procps wget -y
+RUN apt-get install anacron cron net-tools nano sudo procps curl -y
 
 #Install X11 Virtual Framebuffer and X11 Tools
 RUN apt-get install xvfb -y

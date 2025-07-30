@@ -1,5 +1,5 @@
 destinations:
-- TCPDataDestination: {host: "127.0.0.1", port: 1234}
+- TCPDataDestination: {host: "127.0.0.1", port: 5543}
 
 ## Commands: define what to send
 commands:

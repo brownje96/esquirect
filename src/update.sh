@@ -7,8 +7,8 @@ sleep $1
 cd /app/work/
 
 echo Saving XMLTV Listings to Disk
-wget -nv -O /app/work/xmltv.xml $XMLTV_LOCATION
-ECHO Done saving XMLTV.
+curl -o /app/work/xmltv.xml $XMLTV_LOCATION
+echo Done saving XMLTV.
 
 cd /app/linux-distribution
 
@@ -17,7 +17,7 @@ cd /app/linux-distribution
 
 # Now we will send it to Esquire
 echo Sending Listings...
-./PrevueCLI send ../dl.prevuecommand >/dev/null
+./PrevueCLI send ../dl.prevuecommand
 echo Done Sending.
 
 # Cleanup.
