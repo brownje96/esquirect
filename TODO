@@ -1,0 +1,3 @@
+Add music support
+See if FS-UAE really needs the cycle accuracy and other options driving up host CPU usage
+See if ffmpeg can be configured to run more efficiently. This is more on me for being a streaming noob.
