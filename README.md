@@ -21,6 +21,9 @@ At this point in time- you will have to build the container yourself. A script i
 ./build.sh
 docker compose up -d
 ```
+## Usage:
+
+Connect using the URL `rtmp://your_docker_host:1935/live/stream`
 
 
 ## Stacks used:
@@ -32,3 +35,5 @@ docker compose up -d
 
 [Xorg](www.x.org)
 
+
+[nginx](https://github.com/nginx/nginx)
