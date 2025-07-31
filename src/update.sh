@@ -3,7 +3,7 @@
 #First we will wait, just in case Esquire is still booting.
 sleep $1
 
-# Then we will fetch the XMLTV Listings from ErsatzTV
+# Then we will fetch the XMLTV Listings.
 cd /app/work/
 
 echo Saving XMLTV Listings to Disk
