@@ -8,10 +8,10 @@ services:
             # Mandatory Files. Getting them is up to you. Your liability, not mine.
 
             # This is the image for UVG Esquire/TV Guide
-            - /root/PREVUE.ADF:/app/prevue.adf:ro
+            - ./PREVUE.ADF:/app/prevue.adf:ro
 
             # This is the Commodore Business Machines AMiGA 500+ "KickStart" (BIOS) 2.4 ROM.
-            - /root/KS204.rom:/app/ks.rom:ro
+            - ./KS204.rom:/app/ks.rom:ro
 
             # For Time Sync. Ostensibly safe to leave completely alone.
             - /etc/localtime:/etc/localtime:ro
