@@ -23,7 +23,9 @@ docker compose up -d
 ```
 ## Usage:
 
-Connect using the URL `rtmp://your_docker_host:1935/live/stream`
+Connect from RTMP using the URL `rtmp://your_docker_host:1935/live/stream`
+
+Connect from HLS Streaming using the URL `http://your_docker_host/hls/stream.m3u8`
 
 
 ## Stacks used:
@@ -34,6 +36,5 @@ Connect using the URL `rtmp://your_docker_host:1935/live/stream`
 [ffmpeg - Video Toolkit](https://git.ffmpeg.org/gitweb/ffmpeg.git)
 
 [Xorg](www.x.org)
-
 
 [nginx](https://github.com/nginx/nginx)

@@ -6,9 +6,12 @@ WORKDIR /app
 RUN curl -sLo /dev/stdout http://prevueguide.com/Tools/PrevuePackage/PrevueCLI-2.1.1-Linux.tar.gz | tar -xvzf - -C "/app"
 COPY src/ /app
 RUN mv /app/esq_upd /etc/cron.daily
-RUN sed -i 's/worker_processes auto/worker_processes 1/g' /etc/nginx/nginx.conf
-RUN cat nginx-rtmp-cfg >> /etc/nginx/nginx.conf
-RUN rm nginx-rtmp-cfg
+
+# Make relevant changes to nginx.conf
+RUN rm -r /etc/nginx/sites-enabled/*
+RUN rm /etc/nginx/nginx.conf
+RUN mv /app/nginx.conf /etc/nginx/nginx.conf
+
 EXPOSE 1935
 EXPOSE 5901
 ENV DISPLAY=:1

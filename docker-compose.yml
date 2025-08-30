@@ -2,6 +2,7 @@ name: prevue-guide
 services:
     test:
         ports:
+            - 80:80      # HTTP HLS Port
             - 1935:1935  # RTMP Port
             - 5901:5901  # VNC Port
         volumes:
