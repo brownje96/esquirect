@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #First we will wait, just in case Esquire is still booting.
-sleep $1
+sleep ${1:-15s}
 
 # Then we will fetch the XMLTV Listings.
 cd /app/work/

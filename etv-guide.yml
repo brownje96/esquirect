@@ -1,0 +1,3 @@
+url: rtmp://YOUR_HOST_HERE:1935/live/stream
+is_live: true
+duration: 01:00:00
