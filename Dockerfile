@@ -12,7 +12,16 @@ RUN rm -r /etc/nginx/sites-enabled/*
 RUN rm /etc/nginx/nginx.conf
 RUN mv /app/nginx.conf /etc/nginx/nginx.conf
 
+
+# Web Server port for HLS
+EXPOSE 80
+
+# RTMP Server
 EXPOSE 1935
+
+# VNC Server
 EXPOSE 5901
+
+
 ENV DISPLAY=:1
 ENTRYPOINT ["bash", "go.sh"]

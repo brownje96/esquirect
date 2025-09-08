@@ -7,6 +7,9 @@ rm -rf /tmp/.X1-lock
 service cron start
 anacron start
 
+# Check on the music...
+/app/mkpls.sh /app/music
+
 # X11 Stuff
 Xvfb $DISPLAY -screen 0 1024x768x16 &
 x11vnc -display :1.0 -N -forever -passwd $VNC_PASSWD &
