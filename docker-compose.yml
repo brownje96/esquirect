@@ -6,13 +6,9 @@ services:
             - 1935:1935  # RTMP Port
             - 5901:5901  # VNC Port
         volumes:
-            # Mandatory Files. Getting them is up to you. Your liability, not mine.
-
-            # This is the image for UVG Esquire/TV Guide
             - ./PREVUE.ADF:/app/prevue.adf:ro
-
-            # This is the Commodore Business Machines AMiGA 500+ "KickStart" (BIOS) 2.4 ROM.
             - ./KS204.rom:/app/ks.rom:ro
+            - ./music/:/app/music:ro
 
             # For Time Sync. Ostensibly safe to leave completely alone.
             - /etc/localtime:/etc/localtime:ro
