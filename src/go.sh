@@ -11,7 +11,9 @@ anacron start
 /app/mkpls.sh /app/music
 
 # X11 Stuff
-Xvfb $DISPLAY -screen 0 1024x768x16 &
+Xvfb $DISPLAY -screen 0 1024x768x24 &
+echo "Waiting 10 seconds for x11 virtual framebuffer to start"
+sleep 10s
 x11vnc -display :1.0 -N -forever -passwd $VNC_PASSWD &
 
 # Stream

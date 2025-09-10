@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [ ! -d $1 ]; then
+    echo "Music was not found."
     > /app/work/NO_MUSIC
     exit 1
 fi
@@ -14,6 +15,7 @@ echo "ffconcat version 1.0" >> /app/work/playlist.txt
 
 for file in "$INPUT_DIR"/*; do
     if [[ $file == *.m4a ]]; then
+        echo "Found Track: $file"
         echo "file '$file'" >> /app/work/playlist.txt
     fi
 done
