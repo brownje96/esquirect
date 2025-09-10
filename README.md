@@ -31,11 +31,7 @@ At this point in time- you will have to build the container yourself. A script i
 docker compose up -d
 ```
 ## Usage:
-
-Connect from RTMP using the URL `rtmp://your_docker_host:1935/live/stream`
-
 Connect from HLS Streaming using the URL `http://your_docker_host/hls/stream.m3u8`
-
 
 ## Stacks used:
 [FS-UAE - Commodore Amiga Emulator](https://github.com/FrodeSolheim/fs-uae)

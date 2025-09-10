@@ -18,6 +18,7 @@ x11vnc -display :1.0 -N -forever -passwd $VNC_PASSWD &
 
 # Stream
 nginx
+./stream.sh &
 
 # Emulator.
 ./update.sh 300 &

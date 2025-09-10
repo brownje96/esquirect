@@ -3,7 +3,6 @@ services:
     test:
         ports:
             - 80:80      # HTTP HLS Port
-            - 1935:1935  # RTMP Port
             - 5901:5901  # VNC Port
         volumes:
             - ./PREVUE.ADF:/app/prevue.adf:ro
@@ -22,6 +21,8 @@ services:
             - XMLTV_LOCATION=http://YOUR_XMLTV_PATH_HERE/xmltv.xml
             # Your VNC Password of choice. Change it you nimrod.
             - VNC_PASSWD=hunter2
+        logging: #It's rather noisy and we don't want to wear out your SSD.
+          driver: "none"
         stdin_open: true
         tty: true
         image: prevue:latest

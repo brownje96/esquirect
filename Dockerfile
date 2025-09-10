@@ -1,7 +1,7 @@
 FROM debian:bookworm
 RUN apt-get update -y; apt-get upgrade -y; apt dist-upgrade -y
 RUN apt-get install anacron cron -y
-RUN apt-get install curl xvfb fs-uae x11vnc ffmpeg libnginx-mod-rtmp nginx -y
+RUN apt-get install curl xvfb fs-uae x11vnc ffmpeg nginx -y
 WORKDIR /app
 RUN curl -sLo /dev/stdout http://prevueguide.com/Tools/PrevuePackage/PrevueCLI-2.1.1-Linux.tar.gz | tar -xvzf - -C "/app"
 COPY src/ /app
@@ -15,9 +15,6 @@ RUN mv /app/nginx.conf /etc/nginx/nginx.conf
 
 # Web Server port for HLS
 EXPOSE 80
-
-# RTMP Server
-EXPOSE 1935
 
 # VNC Server
 EXPOSE 5901
