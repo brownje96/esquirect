@@ -6,7 +6,7 @@ mkdir /app/work/hls
 export ECT_FFMPEG="/usr/bin/ffmpeg"
 # Input
 export INP_AUDIO="-f concat -safe 0 -i /app/work/playlist.txt -stream_loop -1"
-export INP_VIDEO="-thread_queue_size 4096 -f x11grab -r 30 -s 1000x580 -i :1.0"
+export INP_VIDEO="-thread_queue_size 4096 -f x11grab -r 30 -s 1000x585 -i :1.0"
 # Output
 export OUT_VIDEO="-preset ultrafast -c:v libx264"
 export OUT_AUDIO="-metadata:s:a:0 language=eng -c:a aac -b:a 128k"

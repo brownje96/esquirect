@@ -24,3 +24,7 @@ echo Done Sending.
 rm /app/work/xmltv.xml
 rm /app/work/channels.csv
 rm /app/work/programs.csv
+
+# Task Scheduling
+service cron start
+anacron start

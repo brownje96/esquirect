@@ -3,10 +3,6 @@
 # first, clean up from any previous sessions
 rm -rf /tmp/.X1-lock
 
-# System Services
-service cron start
-anacron start
-
 # Check on the music...
 /app/mkpls.sh /app/music
 
