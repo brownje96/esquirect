@@ -14,7 +14,7 @@ Paths/Mounts:
 
 |Path in CT|Mandatory|Description|
 |--------|--------|--------|
-|/app/prevue.adf|✅|Disk Image of the UVG Esquire EPG Software, preferably version 9.0.4|
+|/app/prevue.adf|✅|Disk Image of the UVSG Esquire EPG Software, preferably version 9.0.4|
 |/app/ks.rom|✅|Commodore Business Machines AMiGA 500+ "KickStart" (BIOS) ROM version 2.4|
 |/app/music|❎|Path with music to play in the background. Filenames are sensitive. No apostrophes/single quotes.|
 
@@ -31,7 +31,7 @@ docker compose up -d
 Connect from HLS Streaming using the URL `http://your_docker_host/hls/stream.m3u8`
 
 ## Known Problems:
-Time sync behaves weirdly. The clock in Esquire seems to ultimately adjust itself until the :30 or :00 mark, and then until the completion of the current grid, and that's with the current parameters. Yes your first up to hour of operation will be wrong, but its better than having it permanently off by an hour. I will review this again after the next DST changeover should nobody else file a bug report. Time is complicated, "who knew?"
+Time sync behaves weirdly. The clock in Esquire seems to ultimately correct itself at the next :30 or :00 mark, and the program grid corrects itself after scrolling through the current iteration, and that's -as configured- with the current parameters. Yes your first up to hour of operation will be wrong, but it's better than having it permanently off by an hour. I will review this again after the next DST changeover should nobody else file a bug report. Time is complicated, "who knew?"
 
 ## Stacks used:
 [FS-UAE - Commodore Amiga Emulator](https://github.com/FrodeSolheim/fs-uae)
