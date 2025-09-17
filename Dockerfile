@@ -1,5 +1,5 @@
 FROM debian:bookworm
-RUN apt-get update -y; apt-get upgrade -y; apt dist-upgrade -y
+RUN apt-get update -y
 RUN apt-get install anacron cron -y
 RUN apt-get install curl xvfb fs-uae x11vnc ffmpeg nginx -y
 WORKDIR /app
